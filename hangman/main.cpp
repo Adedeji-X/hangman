@@ -23,8 +23,9 @@ int main() {
    /* while (user_lives > 0){
         
     }*/
-    
-    cout << get_word() << endl;
+    string word =get_word();
+    cout << word << endl;
+    print_blanks(word, "trkileaod");
     return 0;
     
 
