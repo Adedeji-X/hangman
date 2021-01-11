@@ -19,13 +19,23 @@ int generated_numbers();
 
 
 int main() {
-   // int user_lives = 7;
-   /* while (user_lives > 0){
+    
+    int user_lives = 7;
+    string word = get_word();
+    string letter_guessed = "";
+    string guess;
+    while (user_lives > 0){
+       
+        print_board(user_lives);
+        cout << endl << endl;
+        print_blanks(word, letter_guessed);
+        cout <<"\n\n Letter guessed" << letter_guessed << endl;
+        cout << "\n\n Enter a letter ";
+        cin >> guess;
         
-    }*/
-    string word =get_word();
-    cout << word << endl;
-    print_blanks(word, "trkileaod");
+        letter_guessed += guess;
+    }
+  
     return 0;
     
 
