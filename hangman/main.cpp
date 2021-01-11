@@ -34,6 +34,13 @@ int main() {
         cin >> guess;
         
         letter_guessed += guess;
+        
+        if( word.find(guess) != -1){
+            continue;
+        }
+        else{
+            user_lives--;
+        }
     }
   
     return 0;
