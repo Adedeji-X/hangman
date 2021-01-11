@@ -141,7 +141,17 @@ void print_board(int lives){
 
 void print_blanks(string choosen_word, string letter_guessed)
 {
-    
+    for (int i = 0; i < choosen_word.size(); i++) {
+        
+        if (letter_guessed.find(choosen_word.at(i)) != -1) {
+            cout << choosen_word.at(i) << " " << endl;
+           
+        }
+        
+        else{
+            cout << "_" << endl;
+        }
+    }
 }
 
 int generated_numbers()
