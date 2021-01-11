@@ -23,7 +23,9 @@ int main() {
    /* while (user_lives > 0){
         
     }*/
-    return generated_numbers();
+    
+    cout << get_word() << endl;
+    return 0;
     
 
 }
@@ -34,11 +36,28 @@ string get_word()
     string temp_word;
     string wordlist[SIZE_OF_WORD] = {""};
     
+    int index = 0;
+    
     fstream input_file("/Users/cloud/Documents/cpp/hangman/wordlists.txt");
     if (!input_file) {
         cout << "Error: -2 word list not located" << endl;
     }
-    return 0;
+    
+    input_file.ignore(255, '\n');
+    
+    //pre-read
+    input_file >> temp_word;
+    
+    while (!input_file.eof()) {
+        
+        wordlist[index] = temp_word;
+        index++;
+        
+    //Post-read
+        input_file >> temp_word;
+    }
+    
+    return wordlist[generated_numbers()];
 }
 
 void print_board(int lives){
