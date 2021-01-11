@@ -1,0 +1,12 @@
+******wordlist*****
+
+Giraffe
+Ram
+Goose
+Dog
+Lion
+Blue
+Horse
+Antelope
+Phone
+Laptop
