@@ -62,6 +62,81 @@ string get_word()
 
 void print_board(int lives){
     
+    switch (lives) {
+        case 0:
+            cout << "\t\t\t| ------ |" << endl;
+            cout << "\t\t\t|        0" << endl;
+            cout << "\t\t\t|       /|\\" << endl;
+            cout << "\t\t\t|        |" << endl;
+            cout << "\t\t\t|       / \\" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|_";
+            break;
+        case 1:
+            cout << "\t\t\t| ------ |" << endl;
+            cout << "\t\t\t|        0" << endl;
+            cout << "\t\t\t|       /|\\" << endl;
+            cout << "\t\t\t|        |" << endl;
+            cout << "\t\t\t|         \\" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|_";
+            break;
+        case 2:
+            cout << "\t\t\t| ------ |" << endl;
+            cout << "\t\t\t|        0" << endl;
+            cout << "\t\t\t|       /|\\" << endl;
+            cout << "\t\t\t|        |" << endl;
+            cout << "\t\t\t|         \\" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|_";
+            break;
+        case 3:
+            cout << "\t\t\t| ------ |" << endl;
+            cout << "\t\t\t|        0" << endl;
+            cout << "\t\t\t|       /|" << endl;
+            cout << "\t\t\t|        |" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|_";
+            break;
+        case 4:
+            cout << "\t\t\t| ------ |" << endl;
+            cout << "\t\t\t|        0" << endl;
+            cout << "\t\t\t|        |" << endl;
+            cout << "\t\t\t|        |" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|_";
+            break;
+        case 5:
+            cout << "\t\t\t| ------ |" << endl;
+            cout << "\t\t\t|        0" << endl;
+            cout << "\t\t\t|        |" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|_";
+            break;
+        case 6:
+            cout << "\t\t\t| ------ |" << endl;
+            cout << "\t\t\t|        0" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|_";
+            break;
+        case 7:
+            cout << "\t\t\t| ------ |" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|" << endl;
+            cout << "\t\t\t|_";
+            break;
+    }
+
 }
 
 void print_blanks(string choosen_word, string letter_guessed)
