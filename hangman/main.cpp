@@ -17,6 +17,7 @@ void print_board(int);
 void print_blanks(string , string);
 int generated_numbers();
 
+bool flag = false;
 
 int main() {
     
@@ -25,10 +26,13 @@ int main() {
     string letter_guessed = "";
     string guess;
     while (user_lives > 0){
-       
+        flag = true;
         print_board(user_lives);
         cout << endl << endl;
         print_blanks(word, letter_guessed);
+        if (flag == true) {
+            break;
+        }
         cout <<"\n\n Letter guessed" << letter_guessed << endl;
         cout << "\n\n Enter a letter ";
         cin >> guess;
@@ -36,13 +40,24 @@ int main() {
         letter_guessed += guess;
         
         if( word.find(guess) != -1){
+
             continue;
         }
         else{
+
             user_lives--;
         }
     }
-  
+    
+    if (user_lives == 0){
+        cout << "\n\n\nYou Lose" << endl << endl;
+        cout << "the word was :" << word << endl;
+        
+    }
+    else if(user_lives > 0){
+        cout << "\n\n\nYou Win" << endl << endl;
+        cout << "the word was :" << word << endl;
+    }
     return 0;
     
 
@@ -168,6 +183,7 @@ void print_blanks(string choosen_word, string letter_guessed)
         
         else{
             cout << "_" << endl;
+            flag = false;
         }
     }
 }
